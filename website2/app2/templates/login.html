@@ -1,0 +1,55 @@
+{% extends 'master.html' %}
+{% load static %}
+
+{% block title %}
+login page
+{% endblock %}
+{% block content %}
+<!-- <section>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="inbox head">
+                    <img src="{% static 'con.jpg' %}" alt="" width="100%">
+                    <h2 class="text"> CONTACT US</h2> -->
+                <!-- </div>
+
+            </div>
+        </div>
+    </div>
+
+</section> -->
+<section class="login">
+    <div class="container">
+        <div class="row">
+            <h2 class="text-center"> LOGIN YOUR DETAILS</h2>
+            <div class="col-sm-6 mx-auto">
+                <form action="login"  method="POST">
+                    {% csrf_token %}
+                    <div class="mb-3 mt-3">
+                        <label for="text" > Name </label>
+                        
+                    <input type="text" class="form-control" id="name" name="log_name" placeholder="Enter name">
+                
+                    </div>
+                    <div class="mb-3 mt-3">
+                        <label for="email">Password</label>
+                        
+                    <input type="password" class="form-control" id="password" name="log_password" placeholder="Enter your password">
+                
+                    </div>
+                    <!-- <div class="mb-3 mt-3">
+                        <label for="msg">Message</label>
+                        <textarea  class="form-control" id="msg" name="contact_message" placeholder="Enter message" ></textarea>
+                        
+                     </div> -->
+                     <button type="submit" class="btn btn-warning">submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% include 'footer.html' %}
+{% endblock %}

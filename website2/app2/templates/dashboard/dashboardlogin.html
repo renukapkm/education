@@ -1,0 +1,115 @@
+{% extends 'dashboard/dashboardmaster.html' %}
+{% load static %}
+
+{% block title %}
+login page
+{% endblock %}
+{% block content %}
+
+
+
+<section class="dashlog ">
+  <div class="container mt-3">
+    <div class="row ">
+      <div class="col-sm-6 mx-auto">
+<form action="/dashboardlogin" method="post" class="mt-5">
+  {% csrf_token %}
+  <h2 class="text-center text-primary">ADMINISTRATION LOGIN</h2>
+  <div class="input-container">
+    <i class="bi bi-person-fill icon"></i>
+    <input class="input-field" type="text" placeholder="Username" name="log_user">
+  </div>
+
+  <!-- <div class="input-container">
+    <i class="fa fa-envelope icon"></i>
+    <input class="input-field" type="text" placeholder="Email" name="email">
+  </div> -->
+
+  <div class="input-container">
+    <i class="bi bi-key icon"></i>
+    <input class="input-field" type="password" placeholder="Password" name="log_passwd">
+  </div>
+
+  <button type="submit" class="btn">Login</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+
+<!-- <section class="dashlog ">
+    <div class="container mt-3">
+      <h2 class="text-center text-warning">ADMINISTRATION LOGIN</h2>
+      <div class="row ">
+        <div class="col-lg-6 col-md-6 col-sm-6 mx-auto ">
+        <form action="/dashboardlogin" method="post" class="mt-5">
+          {% csrf_token %}
+        
+          <div class="input-container mt-2">
+            <i class="fa fa-user "></i>
+           
+            <input class="input-field" type="text" placeholder="Username" name="log_user">
+          </div>
+          <div class="input-container mt-2 ">
+            <i class="fa fa-key "></i> 
+            <input class="input-field" type="password" placeholder="Password" name="log_passwd">
+          </div>
+          <button type="submit" class="btnclr mt-2">Login</button>
+    
+    
+    </form>
+    </div>
+    
+    </div>
+    
+    </div>
+    </section> -->
+    <style>
+      * {box-sizing: border-box;}
+
+/* Style the input container */
+.input-container {
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+/* Style the form icons */
+.icon {
+  padding: 10px;
+  background: rgb(249, 190, 43);
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
+
+/* Style the input fields */
+.input-field {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+}
+
+.input-field:focus {
+  border: 2px solid dodgerblue;
+}
+
+/* Set a style for the submit button */
+.btn {
+  background-color: rgb(245, 201, 54);
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+    </style>
+    
+    
+    
+    {% endblock %} 

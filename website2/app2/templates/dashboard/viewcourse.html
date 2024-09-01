@@ -1,0 +1,36 @@
+{% extends 'dashboard/dashboardmaster.html' %}
+{% load static %}
+
+{% block title %}
+viewcourse page
+{% endblock %}
+{% block content %}
+<h1 class="demo">view course</h1>
+<table class="table  table-bordered  w-50   mx-auto">
+    <thead>
+        <tr>
+            <th>Course name</th>
+            <th>course image</th>
+            <th>Description</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for x in viewcourse %}
+        <tr>
+            <td>{{x.cou_name }}</td>
+            <td><img src="/media/{{ x.cou_image }}" alt="" width="100%"></td>
+            <td>{{ x.cou_text }}</td>
+            <td> <a href="/editcourse/{{x.id}}">
+                <button class="btn btn-primary"><i class="bi bi-pencil-square"></i> </button></a>
+                <br><br>
+               <a href="/viewcourse?del={{x.id}}"> <button class="btn btn-danger"><i class="bi bi-trash3-fill"></i></button></a>
+            </td>
+
+
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

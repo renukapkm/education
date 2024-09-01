@@ -1,0 +1,107 @@
+{% extends 'master.html' %}
+{% load static %}
+
+{% block title %}
+about page
+{% endblock %}
+{% block content %}
+
+<section class="section">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="inbox1">
+                    <img src="{% static 'students.jpg' %}" alt="" width="100%">
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="row p-5">
+            <div class="col-xl-6 col-lg-6 col-sm-12 ">
+                <div class="inbox1 text-center">
+                    <img src="{% static 'aboutt.png' %}" alt="" width="80%">
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-sm-12">
+                <div class="inbox1">
+                    <h2>Shaping Academic And Career Futures</h2>
+                    <p>At Study Sphere, we are driven by a passion to empower students in South India to realize their full potential and achieve their dreams. We are an education consultancy based in Bangalore that provides a comprehensive range of services designed to support students throughout their academic and professional journeys.</p>
+                    <p>We believe that every student possesses unique strengths and aspirations, and we are committed to helping them identify and cultivate these qualities. Our team of experienced professionals is dedicated to providing personalized guidance and support to each student, ensuring that they receive the attention and resources they need to thrive in their academic endeavors.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="inbox1 text-center">
+                    <h2>Let's Get Social</h2>
+                    <p>Follow us on Social Media for your daily dose of inspiration and Updates!</p>
+                    <div class="row">
+                        <div class="col">
+                          <div class="iconbox" style="min-height: 70px;">
+                            <a href="https://www.instagram.com/"><i class="bi6 bi-instagram"></i></a>
+                            <a href="https://www.facebook.com/"><i class="bi6 bi-facebook"></i></a>
+                            <a href="https://www.linkedin.com/"><i class="bi6 bi-linkedin"></i></a>
+                            <a href="https://www.whatsapp.com/"><i class="bi6 bi-whatsapp"></i></a>
+                          </div>
+                        </div>
+                        
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="row p-5">
+            <div class="col-xl-6 col-lg-6 col-sm-12">
+                <div class="inbox1">
+                   <p>Dr. Jane Smith, the CEO of Study Sphere, is a visionary leader who has profoundly influenced the landscape of higher education. With a Doctorate in Education from Stanford University and a wealth of experience in academic leadership, Dr. Smith has been at the helm of Study Sphere during a transformative period. Her leadership has been pivotal in launching innovative programs and forging strategic partnerships that have broadened the college’s academic horizons and strengthened its ties to the community.</p> 
+                   <p>Dr. Smith’s commitment to educational excellence is reflected in her strategic vision for the college, which focuses on fostering an inclusive and dynamic learning environment. She is dedicated to advancing Study Sphere’s mission by promoting academic rigor, supporting faculty development, and expanding research opportunities. </p> 
+                   
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-sm-12">
+                <div class="inbox1 text-center">
+                    <img src="{% static 'Designer.png' %}" alt="" width="80%">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="aboutsec" >
+   <div class="container">
+    <div class="row mt-4">
+        <div class="col-xl-6 col-lg-6 col-sm-12">
+            <div class="inbox5 text-center">
+                <h2>Our Mission</h2>
+                <p>Empowering students in South India to reach their full potential and become the architects of their dreams.
+                We envision a future where every student in South India has the opportunity to flourish, regardless of their background or circumstances. We see students who are confident, self-aware, and equipped with the knowledge, skills, and experiences they need to succeed in a rapidly changing world.</p>
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-sm-12  ">
+            <div class="inbox5 text-center">
+                <h2>Our Vision</h2>
+                <p>To Be The Catalyst For Academic Excellence And Career Success For Students In South India.
+
+                We are driven by a mission to provide students with the tools and resources they need to navigate the complexities of the education system and achieve their academic goals. We are committed to helping them identify their strengths, develop essential skills, and make informed decisions about their futures.</p>
+            </div>
+        </div>
+    </div>
+   </div>
+
+</section>
+{% include 'footer.html' %}
+
+<!-- why choose study spere  -->
+ <!-- footer  -->
+{% endblock %}

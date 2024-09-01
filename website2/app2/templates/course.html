@@ -1,0 +1,66 @@
+{% extends 'master.html' %}
+{% load static %}
+
+{% block title %}
+course page
+{% endblock %}
+{% block content %}
+<h2 class="text-center"> CHOOSE YOUR FUTURE </h2>
+<section>
+  <div class="container">
+    
+    <div class="row  ">
+      {% for x in co %}
+      <div class="col-xl-3 col-lg-4 col-sm-6">
+       
+        <a href="/details/{{x.id}}" class="btn" style="color:rgb(241, 247, 247);"> 
+        <div class="inbox card1 text-center mt-3">
+          
+      <img src="/media/{{x.cou_image}} " alt="" width="100%">
+          <h2>{{ x.cou_name }}</h2>
+          <!-- <h6>{{ x.cou_price}}</h6> -->
+          <p class="para" >{{x.cou_text }}</p>
+          <!-- <p>{{ x.cou_descri }}</p> -->
+        </a>
+        </div>
+        
+      </div>
+      {% endfor %}
+    </div>
+
+   
+  </div>
+</section>
+      <!-- <div class="col-sm-3 mx-auto">
+        <div class="inbox card1 text-center ">
+          <img src="{% static 'business.jpg' %}" alt="" width="100%">
+          <h2>Business Management</h2>
+          <p>Embark on a rewarding journey in the dynamic world of business management, where you’ll develop the skills and knowledge to lead and innovate in various industries.</p>
+        </div>
+      </div> -->
+      <!-- <div class="col-sm-3 mx-auto">
+        <div class="inbox card1 text-center ">
+          <img src="{% static 'avat.jpg' %}" alt="" width="100%">
+          <h2>Aviation Management</h2>
+          <p>Take to the skies and pursue a career in aviation, where you’ll experience the thrill of flight and explore the world from a different perspective.</p>
+        </div>
+      </div> -->
+      <!-- <div class="col-sm-3 mx-auto">
+        <div class="inbox card1 text-center ">
+          <img src="{% static 'Logistics.jpg' %}" alt="" width="100%">
+          <h2>Logistics Management</h2>
+          <p>Take to the skies and pursue a career in aviation, where you’ll experience the thrill of flight and explore the world from a different perspective.</p>
+        </div>
+      </div> -->
+      
+    
+<!-- <div class="card" style="width:400px">
+    <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+    <div class="card-body">
+      <h4 class="card-title">Microsoft Power BI Certification Training Course</h4>
+      <p class="card-text">Some example text.</p>
+      <a href="#" class="btn btn-primary">See Profile</a>
+    </div>
+  </div> -->
+  {% include 'footer.html' %}
+{% endblock %}
